@@ -19,12 +19,12 @@ class _ImageInputWState extends State<ImageInputW> {
 
   Future<void> _takePicture() async {
     try {
-      final _picker = ImagePicker(); //instantiate ImagePicker
+      final _picker =
+          ImagePicker(); //instantiate ImagePicker is mandatory for latest version
       final imageFile = await _picker.pickImage(
         source: ImageSource.camera,
         maxWidth: 600,
       );
-
       if (imageFile == null) {
         return;
       }
@@ -33,7 +33,7 @@ class _ImageInputWState extends State<ImageInputW> {
       });
       final appDir = await syspath.getApplicationDocumentsDirectory();
       final fileName = path.basename(imageFile.path);
-      print('fileName: $fileName');
+      // print('fileName: $fileName');
       final savedImage = await _storedImage.copy('${appDir.path}/$fileName');
       widget.onSelectImage(savedImage);
     } catch (error) {
