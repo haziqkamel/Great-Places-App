@@ -1,6 +1,9 @@
-# great_places_app
+# Great Places App
 
-A new Flutter project.
+
+### Setting
+minSdk 20
+maxSdk 30
 
 ## Getting Started
 

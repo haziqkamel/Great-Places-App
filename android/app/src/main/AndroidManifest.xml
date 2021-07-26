@@ -8,9 +8,14 @@
         </intent>
     </queries>
 
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION"/>
+
    <application
         android:label="great_places_app"
         android:icon="@mipmap/ic_launcher">
+        <meta-data android:name="com.google.android.geo.API_KEY"
+               android:value="AIzaSyC6iekKS6PVFXEBGzxWQr15JtpaFG6CU3o"/>
         <activity
             android:name=".MainActivity"
             android:launchMode="singleTop"
